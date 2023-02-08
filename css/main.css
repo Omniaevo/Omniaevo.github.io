@@ -340,6 +340,10 @@ body {
 }
 
 @media (orientation:portrait) {
+  .text-mobile {
+    font-size: 1.7rem !important;
+  }
+
   .motivational-title {
     line-height: 6vw;
   }
