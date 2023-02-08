@@ -1,0 +1,352 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+[desc] {
+  position: relative;
+  overflow: hidden;
+}
+
+[desc]:hover .title {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  padding: 1.5rem 0;
+  color: white;
+}
+
+[desc]:hover::after {
+  content: attr(desc);
+  background-color: #cc5413;
+  color: white;
+  position: absolute;
+  inset: 0;
+  padding-top: 3.7rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.oe-section-alt {
+  position: relative;
+  top: 50%;
+  margin-left: 50vw;
+  transform: translate(-50%, -50%);
+}
+
+.unloaded {
+  display: none;
+}
+
+.loaded {
+  display: block;
+  overflow: hidden;
+}
+
+.page {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+}
+
+.oe-section {
+  position: relative;
+  margin-left: 50vw;
+  transform: translateX(-50%);
+  padding-top: 7vh;
+  padding-bottom: 7vh;
+}
+
+.motivational-title p,
+.motivational-title h1,
+.motivational-title h2 {
+  color: white;
+}
+
+.invisible {
+  opacity: 0;
+}
+
+.translucent-blue {
+  background-color: rgba(22, 54, 135, 0.85);
+  backdrop-filter: blur(10px);
+}
+
+.header-circle {
+  position: absolute;
+  display: inline-block;
+  border-bottom-right-radius: 100%;
+  background-color: #163687;
+  cursor: pointer;
+  z-index: 8;
+}
+
+.oe-wrap {
+  word-wrap: break-word;
+}
+
+.bg-oe {
+  background-image: linear-gradient(to bottom right, #163687, #341687);
+}
+
+.oe-footer {
+  color: white;
+  background-image: linear-gradient(to bottom right, rgb(34, 34, 68), rgb(50, 34, 68));
+  padding: 1.4em;
+}
+
+.oe-footer div {
+  position: relative;
+  margin-left: 50vw;
+  transform: translateX(-50%);
+}
+
+.oe-link {
+  color: #e08f14;
+}
+
+.oe-link:hover {
+  color: #e08f14;
+  font-weight: bolder;
+}
+
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+#oe-circle {
+  position: fixed;
+  background-image: linear-gradient(to bottom right, #163687, #341687);
+  transform-origin: 0 0;
+  border-bottom-right-radius: 100%;
+}
+
+#motivational {
+  position: relative;
+  top: 50vh;
+  left: 4em;
+  transform: translateY(-50%);
+}
+
+#oe-map {
+  width: 100%;
+  height: 25rem;
+  background-color: #16368742;
+  position: relative;
+}
+
+#display-map {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+#first-page {
+  z-index: 5;
+}
+
+#third-page,
+#fifth-page {
+  background-image: linear-gradient(to bottom right, #163687, #341687);
+  margin: 0;
+}
+
+@media (orientation:landscape) {
+  body::-webkit-scrollbar {
+    display: none;
+  }
+
+  body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .motivational-title {
+    line-height: 6vh;
+  }
+
+  .motivational-title h1 {
+    font-size: 6.5vh;
+  }
+
+  .motivational-title h2 {
+    font-size: 5vh;
+  }
+
+  .oe-logo {
+    height: 8vh;
+    width: auto;
+  }
+
+  .oe-logo-title {
+    height: 3.2vh;
+    width: auto;
+  }
+
+  .header-circle {
+    padding-right: 2vh;
+    padding-bottom: 2vh;
+    padding-left: .4vh;
+    padding-top: .4vh;
+  }
+
+  .oe-section-alt {
+    width: 56vw;
+  }
+
+  .oe-section {
+    width: 56vw;
+  }
+
+  .oe-footer div {
+    width: 56vw;
+    font-size: 1.6vh;
+  }
+
+  .main-text {
+    font-size: 2.6vh;
+    padding: 1em;
+  }
+
+  .oe-pill {
+    height: 0.7vw;
+    width: 0.7vw;
+    margin: 1.5vw 0 1.5vw 0;
+    backdrop-filter: invert(100%);
+    filter: grayscale() contrast(300%);
+  }
+
+  .oe-round-pill {
+    border-radius: 50%;
+    opacity: 0;
+  }
+
+  .oe-pill:hover {
+    transform: scale(2.5);
+    background-color: #e08f14;
+    backdrop-filter: unset;
+    filter: unset;
+  }
+
+  .oe-pill:hover::before {
+    content: attr(pill-content);
+    position: absolute;
+    color: black;
+    background-color: #e08f14;
+    padding: 0.4em 1.2em 0.4em 0.8em;
+    border-radius: 100vh 0 0 100vh;
+    font-size: 0.3666em;
+    font-weight: bold;
+    white-space: nowrap;
+    right: 50%;
+    animation: slide 0.3s ease-in-out;
+  }
+
+  .active-pill {
+    transform: scale(1.5);
+    background-color: #e08f14;
+    backdrop-filter: unset;
+    filter: unset;
+  }
+
+  #oe-circle {
+    height: 120vw;
+    width: 120vw;
+  }
+
+  #nav-pills {
+    position: fixed;
+    right: -3vw;
+    top: 50vh;
+    transform: translateY(-50%);
+    border-radius: 2vw;
+    z-index: 15;
+  }
+
+  @keyframes slide {
+    0% {
+      right: -100%;
+      opacity: 0;
+      border-radius: 100vh;
+    }
+
+    50% {
+      opacity: 0;
+      border-radius: 100vh;
+    }
+
+    100% {
+      right: 50%;
+      opacity: 1;
+      border-radius: 100vh 0 0 100vh;
+    }
+  }
+}
+
+@media (orientation:portrait) {
+  .motivational-title {
+    line-height: 6vw;
+  }
+
+  .motivational-title h1 {
+    font-size: 7vw;
+  }
+
+  .motivational-title h2 {
+    font-size: 6.4vw;
+  }
+
+  .oe-logo {
+    height: 15vw;
+    width: auto;
+  }
+
+  .oe-logo-title {
+    height: 4vw;
+    width: auto;
+  }
+
+  .header-circle {
+    padding-right: 3vw;
+    padding-bottom: 3vw;
+    padding-left: .4vw;
+    padding-top: .4vw;
+  }
+
+  .oe-section-alt {
+    width: 86vw;
+  }
+
+  .oe-section {
+    width: 86vw;
+  }
+
+  .oe-footer div {
+    width: 76vw;
+    font-size: 1.2vh;
+  }
+
+  .main-text {
+    font-size: 2.2vh;
+  }
+
+  #oe-circle {
+    height: 120vh;
+    width: 120vh;
+  }
+
+  #nav-pills {
+    display: none;
+  }
+}

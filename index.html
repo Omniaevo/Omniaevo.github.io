@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Omniaevo</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.maptiler.com/maplibre-gl-js/v2.4.0/maplibre-gl.js"></script>
+    <script src="./js/main.js"></script>
+
+    <link href="https://cdn.maptiler.com/maplibre-gl-js/v2.4.0/maplibre-gl.css" rel="stylesheet" />
+    <link href="./css/main.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css"
+    />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="./assets/icons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/icons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/icons/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./assets/icons/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="./assets/icons/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+  </head>
+  <body>
+    <div id="header" class="invisible">
+      <div id="to-home" class="header-circle">
+        <a href="#first-page" title="Torna alla home">
+          <img src="./assets/logo.svg" class="oe-logo" />
+        </a>
+      </div>
+    </div>
+
+    <div id="nav-pills">
+      <a href="#first-page">
+        <div class="oe-pill active-pill" pill-content="Home"></div>
+      </a>
+      <a href="#second-page">
+        <div class="oe-pill oe-round-pill" pill-content="Chi siamo"></div>
+      </a>
+      <a href="#third-page">
+        <div class="oe-pill oe-round-pill" pill-content="Cosa facciamo"></div>
+      </a>
+      <a href="#fourth-page">
+        <div class="oe-pill oe-round-pill" pill-content="Servizi"></div>
+      </a>
+      <a href="#fifth-page">
+        <div class="oe-pill oe-round-pill" pill-content="Testimonial"></div>
+      </a>
+      <a href="#sixth-page">
+        <div class="oe-pill oe-round-pill" pill-content="Contatti"></div>
+      </a>
+    </div>
+
+    <section id="first-page" class="page loaded">
+      <div id="oe-circle" class="invisible">
+        <div id="motivational" class="motivational-title">
+          <img src="./assets/omniaevo-white.svg" class="oe-logo-title" />
+          <h1>Soluzioni semplici</h1>
+          <h1>per esigenze complesse.</h1>
+        </div>
+      </div>
+    </section>
+
+    <section id="second-page" class="page unloaded">
+      <div class="oe-section-alt">
+        <h1 class="title">I.C.T a 360°</h1>
+        <div class="card">
+          <div class="card-content content">
+            <div class="main-text">
+              Omniaevo S.r.l. opera in tutti i settori dell'information
+              technology, dall'internetworking all'automazione industriale.
+            </div>
+            <div class="main-text">
+              L'attivit&agrave; di Omniaevo si distingue per la capacit&agrave;
+              del Team di mettere in campo un ampio spettro di competenze volte
+              a fornire soluzioni di alta qualit&agrave; tecnica, semplici e
+              centrate sul cliente.
+            </div>
+            <div class="main-text">
+              Il valore aggiunto dei servizi offerti &egrave; dato
+              dall'affiancamento e stretto coinvolgimento del cliente in ogni
+              fase progettuale.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="third-page" class="unloaded">
+      <div class="oe-section">
+        <h1 class="title has-text-white">Cosa facciamo</h1>
+        <div class="columns is-desktop">
+          <div class="column">
+            <div class="card" style="height: 100%" desc="Progettiamo soluzioni per l’industria: automazione, robotica, controllo di processo, supervisione, sistemi di misura e monitoraggio, sistemi di visione, gestione energia, saldatura automatizzata, controllo produzione. Inoltre sviluppiamo applicazioni per monitoraggio geologico ed ambientale.">
+              <div class="card-image">
+                <figure class="image is-16by9">
+                  <img src="./assets/what-we-do/omniaevo_engineering.jpg" alt="Engineering" />
+                </figure>
+              </div>
+              <div class="card-content">
+                <div class="content">
+                  <p class="title is-4">Engineering</p>
+                  <p>Soluzioni per l'industria e il monitoraggio ambientale</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="card" style="height: 100%" desc="Progettiamo e installiamo sistemi di comunicazione : cablaggi rame e fibra, connettività wireless, firewall, VPN, soluzioni multi-homing, ponti radio, bus di campo civili ed industriali, Thin client, PCoIP, desktop virtualization.">
+              <div class="card-image">
+                <figure class="image is-16by9">
+                  <img src="./assets/what-we-do/omniaevo_network.jpg" alt="Network" />
+                </figure>
+              </div>
+              <div class="card-content">
+                <div class="content">
+                  <p class="title is-4">Network</p>
+                  <p>
+                    Progettazione e installazione di sistemi di comunicazione di
+                    rete
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="card" style="height: 100%" desc="Studiamo processi, algoritmi, modellazione matematica, raccolta ed analisi dati (scientifici, economici, marketing, …), data-fusion, analisi geografiche. Progettiamo elettronica digitale ed analogica personalizzata. Sviluppiamo software di laboratorio e prototipizzazione hardware e software.">
+              <div class="card-image">
+                <figure class="image is-16by9">
+                  <img src="./assets/what-we-do/omniaevo_research.jpg" alt="Research" />
+                </figure>
+              </div>
+              <div class="card-content">
+                <div class="content">
+                  <p class="title is-4">Research</p>
+                  <p>
+                    Processi, algoritmi, modellazione matematica, raccolta ed
+                    analisi dati
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="columns is-desktop">
+          <div class="column">
+            <div class="card" style="height: 100%" desc="Progettiamo ed allestiamo piattaforme di elaborazione, virtualizzazione, storage, clustering hardware, clustering applicativo, disaster recovery. Forniamo assistenza tecnica on-site ed off-site. Realizziamo databases distribuiti, big data, business intelligence.">
+              <div class="card-image">
+                <figure class="image is-16by9">
+                  <img src="./assets/what-we-do/omniaevo_systems.jpg" alt="System" />
+                </figure>
+              </div>
+              <div class="card-content">
+                <div class="content">
+                  <p class="title is-4">System</p>
+                  <p>
+                    Piattaforme di elaborazione e virtualizzazione, assistenza
+                    tecnica
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="card" style="height: 100%" desc="Progettiamo architetture complesse distribuite e scalabili, basate su microservizi in container docker, con comunicazione sincrona o asincrona sfruttando code messaggi Kafka o zeroMQ. Scalabilità gestita tramite orchestratore Kubernetes.">
+              <div class="card-image">
+                <figure class="image is-16by9">
+                  <img src="./assets/what-we-do/omniaevo_software.jpg" alt="Software" />
+                </figure>
+              </div>
+              <div class="card-content">
+                <div class="content">
+                  <p class="title is-4">Software</p>
+                  <p>
+                    Software e firmware per ambienti server, client e mobile
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="card" style="height: 100%" desc="Sviluppiamo sistemi completi orientati al web, per la gestione di processi aziendali, flotte veicoli aziendali e car sharing, analisi e visualizzazione dati, gestioni documentali, database aziendali, tracking produzione, supervisioni e monitoraggi remoti, questionari statistici, gestione assets, GIS e cartografie dinamiche.">
+              <div class="card-image">
+                <figure class="image is-16by9">
+                  <img src="./assets/what-we-do/omniaevo_webApp.jpg" alt="Web Apps" />
+                </figure>
+              </div>
+              <div class="card-content">
+                <div class="content">
+                  <p class="title is-4">Web Apps</p>
+                  <p>Sistemi completi orientati al web per ogni applicazione</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="fourth-page" class="unloaded">
+      <div class="oe-section">
+        <h1 class="title">Servizi</h1>
+        <div class="columns is-desktop">
+          <div class="column">
+            <div class="card" style="height: 100%">
+              <div class="card-image">
+                <figure class="image is-16by9">
+                  <img src="./assets/services/omniaevo_fleet.png" alt="Gestione della flotta aziendale" />
+                </figure>
+              </div>
+              <div class="card-content">
+                <div class="content">
+                  <p class="title is-4">Gestione della flotta aziendale</p>
+                  <p>
+                    Omniaevo è partner autorizzato
+                    <a target="_blank" href="https://www.geotab.com/it/" class="oe-link">Geotab</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="card" style="height: 100%">
+              <div class="card-image">
+                <figure class="image is-16by9">
+                  <img src="./assets/services/omniaevo_3cx.jpg" alt="3CX - Comunicazione unificata" />
+                </figure>
+              </div>
+              <div class="card-content">
+                <div class="content">
+                  <p class="title is-4">3CX - Comunicazione unificata</p>
+                  <p>
+                    La Soluzione di Comunicazione Unificata diventa semplice
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="card" style="height: 100%">
+              <div class="card-image">
+                <figure class="image is-16by9">
+                  <img src="./assets/services/omniaevo_pec.jpg" alt="PEC - Posta Elettronica Certificata" />
+                </figure>
+              </div>
+              <div class="card-content">
+                <div class="content">
+                  <p class="title is-4">PEC - Posta Elettronica Certificata</p>
+                  <p>
+                    Webmail PEC:
+                    <a
+                      target="_blank"
+                      class="oe-link"
+                      href="https://twtmail.twt.it/welcome.wssp"
+                      >Link</a
+                    >
+                    <br />
+                    Manuale operativo PEC TWT:
+                    <a
+                      target="_blank"
+                      class="oe-link"
+                      href="https://eshop.twt.it/pec/manuale/TWT-PEC-MO.pdf"
+                      >Scarica</a
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="fifth-page" class="unloaded">
+      <div class="oe-section">
+        <h1 class="title has-text-white mb-6">Testimonial</h1>
+        <p class="has-text-white title is-5">
+          Il nostro settore ci porta ad avere esigenze di customizzazioni di
+          altissimo livello in termini di Software, Automazione e Robotica che
+          difficilmente si trovano disponibili sul mercato e raramente
+          concentrate in una sola realtà. La nostra collaborazione con Omniaevo
+          ha sempre portato al successo.
+        </p>
+        <p class="mb-4 is-italic has-text-white">
+          Dott. Erik Franceschini, Welding Engineering Department Robotics and Automation Area,
+          <a class="oe-link" target="_blank" href="https://mangiarotti.it">
+            Mangiarotti Spa - A Toshiba and Westinghouse Group Company
+          </a>
+        </p>
+        <br />
+        <p class="mt-4 has-text-white title is-5">
+          Omniaevo ha sviluppato una piattaforma di car sharing per noi in
+          pochissimo tempo realizzando tra l’altro un sistema assolutamente
+          innovativo. Di alto livello e disponibilità l’assistenza e il supporto
+          continuo che Omniaevo ci ha dato nella fase di startup.
+        </p>
+        <p class="is-italic has-text-white">
+          Dott. Paolo Guaitamacchi, CEO, <span class="oe-link">Twist Srl</span>
+        </p>
+      </div>
+    </section>
+
+    <section id="sixth-page" class="unloaded">
+      <div class="oe-section">
+        <h1 class="title">Contatti</h1>
+        <div id="oe-map" class="mb-6 mt-3">
+          <div id="display-map"></div>
+          <script src="./js/map.js"></script>
+        </div>
+        <div class="columns is-desktop">
+          <div class="column">
+            PEC: <a class="oe-link" href="mailto:omniaevo@qnetpec.it">omniaevo@qnetpec.it</a>
+          </div>
+          <div class="column">
+            Amministrazione: <a class="oe-link" href="mailto:amministrazione@omniaevo.it">amministrazione@omniaevo.it</a>
+          </div>
+        </div>
+        <div class="columns is-desktop">
+          <div class="column">
+            Supporto: <a class="oe-link" href="mailto:support@omniaevo.it">support@omniaevo.it</a>
+          </div>
+          <div class="column">
+            Vendite: <a class="oe-link" href="mailto:commerciale@omniaevo.it">commerciale@omniaevo.it</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="oe-footer unloaded">
+      <div>
+        <p>&copy; 2021 Omniaevo s.r.l.</p>
+        <p>P. IVA 02494210301</p>
+        <p>Viale Veneto 33/11 33033 Codroipo (Udine) | Italia</p>
+        <p>
+          tel. +39 0432 1845421 | fax +39 0432 901514 |
+          <a class="oe-link" href="mailto:info@omniaevo.it">info@omniaevo.it</a>
+        </p>
+        <p>
+          Consulta la nostra
+          <a target="_blank" href="/informativa_gdpr.html" class="oe-link">
+            privacy policy
+          </a>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
