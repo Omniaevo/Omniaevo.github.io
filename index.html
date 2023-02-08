@@ -4,10 +4,11 @@
     <title>Omniaevo</title>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdn.maptiler.com/maplibre-gl-js/v2.4.0/maplibre-gl.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ol@v7.2.2/dist/ol.js"></script>
+    <script src="https://unpkg.com/ol-mapbox-style@9.4.0/dist/olms.js"></script>
     <script src="./js/main.js"></script>
 
-    <link href="https://cdn.maptiler.com/maplibre-gl-js/v2.4.0/maplibre-gl.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v7.2.2/ol.css">
     <link href="./css/main.css" rel="stylesheet" />
     <link
       rel="stylesheet"
@@ -324,7 +325,26 @@
       <div class="oe-section">
         <h1 class="title">Contatti</h1>
         <div id="oe-map" class="mb-6 mt-3">
+          <div id="oe-map-card" class="card">
+            <p><strong>Omniaevo s.r.l.</strong></p>
+            <p class="is-size-7">Viale Veneto, 33/15, 33033 Codroipo, UD</p>
+            <p class="is-size-7">
+              <a
+                id="g-map-link"
+                class="oe-link"
+                target="_blank"
+                href="https://www.google.com/maps/place/Omniaevo+s.r.l./@45.966033,12.970886,16z/data=!4m5!3m4!1s0x0:0x4ab984ad8542c785!8m2!3d45.966033!4d12.9708863?hl=it-IT"
+              >
+                Visualizza su Google Maps
+              </a>
+            </p>
+          </div>
           <div id="display-map"></div>
+          <div style="display: none">
+            <div id="oe-marker">
+              <div>Omniaevo s.r.l.</div>
+            </div>
+          </div>
           <script src="./js/map.js"></script>
         </div>
         <div class="columns is-desktop">

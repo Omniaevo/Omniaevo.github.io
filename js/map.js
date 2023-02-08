@@ -1,56 +1,30 @@
 const key = "9Vb4cNpbdi7mQUSoQMPB";
-const oeHq = [12.970886, 45.966033];
-const map = new maplibregl.Map({
-  container: "display-map",
-  style: `https://api.maptiler.com/maps/basic-v2/style.json?key=${key}`,
-  center: oeHq,
-  zoom: 15,
+const oeHq = ol.proj.fromLonLat([12.970886, 45.966033]);
+const styleJson = `https://api.maptiler.com/maps/basic-v2/style.json?key=${key}`;
+
+const attribution = new ol.control.Attribution({
+  collapsible: true,
 });
 
-map.addControl(new maplibregl.NavigationControl(), "top-right");
+/* Map preparation */
 
-map.on("load", () => {
-  map.loadImage(
-    "../assets/marker-small.png",
-    (error, image) => {
-      if (error) throw error;
-
-      map.addImage("custom-marker", image);
-      map.addSource("oe", {
-        type: "geojson",
-        data: {
-          type: "FeatureCollection",
-          features: [
-            {
-              type: "Feature",
-              properties: {},
-              geometry: {
-                type: "Point",
-                coordinates: oeHq,
-              },
-            },
-          ],
-        },
-      });
-      map.addLayer({
-        id: "oe",
-        type: "symbol",
-        source: "oe",
-        layout: {
-          "icon-image": "custom-marker",
-          "icon-overlap": "always",
-        },
-      });
-    }
-  );
-
-  const popup = new maplibregl.Popup({
-    closeButton: false,
-    closeOnClick: false
-  });
-
-  popup
-    .setLngLat(oeHq)
-    .setHTML("<strong>Omniaevo s.r.l.</strong><p>Viale Veneto, 33/15, 33033 Codroipo, UD</p><p><a class='oe-link' target='_blank' href='https://www.google.com/maps/place/Omniaevo+s.r.l./@45.966033,12.970886,16z/data=!4m5!3m4!1s0x0:0x4ab984ad8542c785!8m2!3d45.966033!4d12.9708863?hl=it-IT'>Visualizza su Google Maps</a></p>")
-    .addTo(map);
+const map = new ol.Map({
+  target: "display-map",
+  controls: ol.control.defaults.defaults({ attribution: false }).extend([attribution]),
+  view: new ol.View({
+    constrainResolution: true,
+    center: oeHq,
+    zoom: 16
+  }),
 });
+
+olms.apply(map, styleJson);
+
+const marker = new ol.Overlay({
+  position: oeHq,
+  positioning: "bottom-center",
+  element: document.getElementById("oe-marker"),
+  stopEvent: false,
+});
+
+map.addOverlay(marker);
