@@ -5,6 +5,8 @@ let firstPageH = 0;
 let headerH = 0;
 
 $(document).ready(() => {
+  $("#year").text(`${new Date().getFullYear()}`);
+
   headerH = $("#header").height();
   firstPageH = $("#first-page").height() - headerH - 10;
 

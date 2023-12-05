@@ -21,16 +21,22 @@ body {
   color: white;
 }
 
-[desc]:hover::after {
+[desc]::after {
+  position: absolute;
+  inset: 0;
   content: attr(desc);
   background-color: #cc5413;
   color: white;
-  position: absolute;
-  inset: 0;
   padding-top: 3.7rem;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   padding-bottom: 1.5rem;
+  opacity: 0;
+  transition: all 150ms ease-in-out;
+}
+
+[desc]:hover::after {
+  opacity: 1;
 }
 
 .oe-section-alt {
@@ -109,11 +115,13 @@ body {
 
 .oe-link {
   color: #e08f14;
+  font-weight: 500;
+  transition: font-weight 150ms ease-in-out;
 }
 
 .oe-link:hover {
   color: #e08f14;
-  font-weight: bolder;
+  font-weight: 800;
 }
 
 #header {

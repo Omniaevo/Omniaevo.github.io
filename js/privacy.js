@@ -1,6 +1,8 @@
 let firstPageH = 0;
 
 $(document).ready(() => {
+  $("#year").text(`${new Date().getFullYear()}`);
+
   firstPageH = $("#privacyPolicy-title").height();
 });
 
